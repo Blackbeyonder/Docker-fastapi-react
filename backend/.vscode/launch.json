@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Python: FastAPI with Debugger",
+        "type": "python",
+        "request": "launch",
+        "module": "uvicorn",
+        "args": [
+          "app.main:app",  // Esta es la ruta a tu aplicación FastAPI
+          "--reload"       // Activa la recarga automática para desarrollo
+        ],
+        "env": {
+          "PYTHONPATH": "${workspaceFolder}"  // Asegura que la raíz del proyecto esté en PYTHONPATH
+        },
+        "jinja": true  // Habilita soporte para plantillas Jinja2 si usas
+      }
+    ]
+  }
+  

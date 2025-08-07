@@ -1,0 +1,12 @@
+node_modules/
+
+# Archivos de caché de Python
+__pycache__/
+*.py[cod]
+
+# Archivos de caché específicos
+Backend/__pycache__/
+Backend/app/__pycache__/
+Backend/app/models/__pycache__/
+Backend/app/routes/__pycache__/
+.qodo
