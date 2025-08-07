@@ -11,6 +11,12 @@ Desde la raíz del proyecto, ejecuta:
 ```bash
 npm install
 
+npm run dev
+
+http://localhost:5173/
+
+
+
 
 
 # BACKEND-FASTAPI
