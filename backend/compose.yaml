@@ -8,9 +8,11 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: 2023
       POSTGRES_DB: postgres
+      # Cambiamos PGDATA para que los datos se almacenen en pgdata/pgdata
+      PGDATA: /var/lib/postgresql/data/pgdata
     volumes:
       - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
-      - ./data/postgres:/var/lib/postgresql/data
+      - pgdata:/var/lib/postgresql/data
     ports:
       - "5433:5432"
     healthcheck:
@@ -36,3 +38,6 @@ services:
       - DATABASE_URL=postgresql://postgres:2023@db:5432/postgres
       - SOME_OTHER_ENV_VARIABLE=value
       - WATCHFILES_FORCE_POLLING=true
+
+volumes:
+  pgdata:
